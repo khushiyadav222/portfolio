@@ -1,0 +1,849 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050505" />
+  <title>Khushi Yadav | Aspiring AI Engineer</title>
+  <meta name="description" content="Portfolio of Khushi Yadav, a BCA 2nd-year student and aspiring AI Engineer exploring Artificial Intelligence, Machine Learning, and Python." />
+  <meta name="keywords" content="Khushi Yadav, Aspiring AI Engineer, Machine Learning, Python, AI Engineer, BCA Student, Artificial Intelligence" />
+  <meta name="author" content="Khushi Yadav" />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Khushi Yadav | Aspiring AI Engineer" />
+  <meta property="og:description" content="Portfolio of Khushi Yadav, a BCA 2nd-year student and aspiring AI Engineer exploring Artificial Intelligence, Machine Learning, and Python." />
+  <meta property="og:url" content="https://khushiyadav.dev" />
+  <meta property="og:image" content="Image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Khushi Yadav | Aspiring AI Engineer" />
+  <meta name="twitter:description" content="Portfolio of Khushi Yadav, a BCA 2nd-year student and aspiring AI Engineer exploring AI, ML, and Python." />
+  <meta name="twitter:image" content="Image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23050505'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='24' fill='%23D4AF37' text-anchor='middle'%3EYK%3C/text%3E%3C/svg%3E" />
+
+  <!-- JS availability flag: CSS only hides .reveal when JS is present -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <!-- Three.js for 3D Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.3.3/dist/email.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Khushi Yadav",
+    "url": "https://khushiyadav.dev",
+    "jobTitle": "Aspiring AI Engineer",
+    "description": "BCA 2nd-year student and aspiring AI Engineer exploring Artificial Intelligence, Machine Learning, and Python.",
+    "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Python", "Data Science", "AI Development"],
+    "sameAs": ["https://github.com/khushiyadav222", "https://www.linkedin.com/in/khushi-yadav-43ab45411/", "https://www.instagram.com/iam_yadav3646/?hl=en"]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- ══════════ SCROLL PROGRESS ══════════ -->
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- ══════════ BACKGROUND LAYERS ══════════ -->
+  <div class="bg-neural" aria-hidden="true"></div>
+  <div class="bg-aurora" aria-hidden="true"></div>
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--3" aria-hidden="true"></div>
+  <canvas id="whyaiCanvas" class="whyai-canvas" aria-hidden="true"></canvas>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <!-- ══════════ NAVBAR ══════════ -->
+  <header class="nav" id="navbar">
+    <a href="#home" class="nav-logo" aria-label="Khushi Yadav Home">KY<span>.</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#journey" class="nav-link">Journey</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-side">
+      <a class="nav-resume" id="navResume" href="resume.html" target="_blank" rel="noopener" aria-label="Open Khushi Yadav's resume page">Resume</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" aria-pressed="false">
+        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MOBILE NAV OVERLAY ══════════ -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <main>
+    <!-- ══════════ HERO ══════════ -->
+    <section id="home" class="hero section">
+      <div class="hero-left">
+        <span class="hero-badge reveal">
+          <span class="badge-dot"></span>
+          <span id="heroStatus">Currently Learning — Python • AI • Machine Learning</span>
+        </span>
+
+        <h1 class="hero-title" aria-label="Engineering Smarter AI-Powered Solutions">
+          <span class="hero-line hero-line--main"><span class="hero-line-inner">ENGINEERING</span></span>
+          <span class="hero-line hero-line--accent"><span class="hero-line-inner gold-text">SMARTER</span></span>
+          <span class="hero-line hero-line--accent"><span class="hero-line-inner gold-text">AI-POWERED</span></span>
+          <span class="hero-line hero-line--outline-line"><span class="hero-line-inner hero-line--outline">SOLUTIONS</span></span>
+        </h1>
+
+        <div class="hero-greeting reveal">
+          <span class="greeting-line"></span>
+          <p>Hi, I'm <strong>Khushi Yadav</strong></p>
+        </div>
+
+        <p class="hero-role reveal">
+          <span class="role-tag">ASPIRING AI ENGINEER</span>
+          <span class="role-typed"><span id="typedText"></span><span class="typed-cursor">|</span></span>
+        </p>
+        <p class="hero-desc reveal">A BCA 2nd-year student on a mission to build intelligent systems that solve real problems. I'm diving deep into Python, Machine Learning, and AI — turning curiosity into code, and code into intelligent applications that make a difference.</p>
+
+        <div class="hero-cta reveal">
+          <a href="#projects" class="btn btn-gold">Explore My Work <span class="btn-arrow">→</span></a>
+          <a href="Khushi_Yadav_Resume.pdf" download="Khushi_Yadav_Resume.pdf" class="btn btn-outline" id="downloadResume" aria-label="Download Khushi Yadav's resume as a PDF">Download Resume</a>
+          <a href="resume.html" target="_blank" rel="noopener" class="btn btn-text" id="viewResume">View Resume</a>
+          <a href="#contact" class="btn btn-text">Let's Connect <span class="btn-arrow">→</span></a>
+        </div>
+
+        <div class="hero-meta reveal">
+          <div class="meta-item">
+            <span class="meta-dot"></span>
+            <span><strong>Currently Learning</strong> — Python • AI • ML</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-dot"></span>
+            <span><strong>BCA — 2nd Year</strong></span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-dot"></span>
+            <span>Open to AI Opportunities</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="profile-stage">
+          <div class="profile-aura"></div>
+
+          <div class="profile-card">
+            <div class="profile-card-inner">
+              <img
+                src="Image.png"
+                alt="Khushi Yadav — Aspiring AI Engineer"
+                class="profile-photo"
+                loading="eager"
+                onerror="this.style.display='none';document.getElementById('profileFallback').style.display='flex';"
+              />
+              <div class="profile-fallback" id="profileFallback">
+                <span class="profile-monogram">YK</span>
+                <span class="profile-sub">Aspiring AI Engineer</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <span class="scroll-hint-text">SCROLL TO EXPLORE</span>
+        <span class="scroll-hint-line"></span>
+      </div>
+    </section>
+
+    <!-- ══════════ ABOUT ══════════ -->
+    <section id="about" class="section section--about">
+      <div class="section-head reveal">
+        <span class="section-tag">01 — About</span>
+        <h2 class="section-title">An AI Engineer <span class="gold-text">In The Making</span></h2>
+        <p class="section-sub">Honest, curious, and intentionally building toward intelligent software.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-intro glass-card reveal">
+          <h3>Hello, I'm Khushi. <span class="gold-text">Nice to meet you.</span></h3>
+          <p>
+            Currently pursuing BCA in my second year, I'm building a strong foundation in programming,
+            data science, and artificial intelligence. My goal is to combine software engineering
+            with AI to create practical products that solve real problems.
+          </p>
+          <p>
+            I enjoy learning by building projects, experimenting with new technologies, understanding
+            how intelligent systems work, and continuously improving my development skills.
+          </p>
+          <div class="about-signature">Khushi Yadav</div>
+        </div>
+
+        <div class="about-facts reveal">
+          <div class="fact-card glass-card">
+            <div class="fact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12.5V17c0 1.66 2.69 3 6 3s6-1.34 6-3v-4.5"/></svg>
+            </div>
+            <h4>Education</h4>
+            <p>BCA — 2nd Year</p>
+            <span class="fact-meta">AKTU · Pursuing</span>
+          </div>
+
+          <div class="fact-card glass-card">
+            <div class="fact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h4>Career Direction</h4>
+            <p>AI Engineering</p>
+            <span class="fact-meta">Learning & Growing</span>
+          </div>
+
+          <div class="fact-card glass-card">
+            <div class="fact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
+            </div>
+            <h4>Current Focus</h4>
+            <p>Python, AI, Machine Learning & Intelligent Systems</p>
+            <span class="fact-meta">Hands-on Learning</span>
+          </div>
+
+          <div class="fact-card glass-card">
+            <div class="fact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6v4H9V2Z"/><path d="M15 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+            </div>
+            <h4>Experience</h4>
+            <p>Fresher / Aspiring AI Engineer</p>
+            <span class="fact-meta">Building Through Projects</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Honest statistics -->
+      <div class="stats reveal">
+        <div class="stat">
+          <span class="stat-num" data-target="2" data-pad="2">00</span>
+          <p>Years of BCA</p>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="5">0</span><span class="stat-plus">+</span>
+          <p>Technologies Learning</p>
+        </div>
+        <div class="stat">
+          <span class="stat-num stat-word" data-word="Multiple">Multiple</span>
+          <p>Projects & Experiments</p>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="1" data-pad="2">00</span>
+          <p>Focused Career Goal</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ AI JOURNEY ══════════ -->
+    <section id="journey" class="section section--journey">
+      <div class="section-head reveal">
+        <span class="section-tag">02 — My Path</span>
+        <h2 class="section-title">The <span class="gold-text">AI Journey</span></h2>
+        <p class="section-sub">A learning path designed around fundamentals, building, and growth.</p>
+      </div>
+
+      <div class="journey-list">
+        <div class="journey-item reveal">
+          <div class="journey-num">01</div>
+          <div class="journey-content">
+            <h3>Programming Foundation</h3>
+            <p>Learning programming fundamentals, problem solving, and DSA.</p>
+          </div>
+        </div>
+        <div class="journey-item reveal">
+          <div class="journey-num">02</div>
+          <div class="journey-content">
+            <h3>AI Fundamentals</h3>
+            <p>Understanding core AI concepts, data handling, and intelligent system design.</p>
+          </div>
+        </div>
+        <div class="journey-item reveal">
+          <div class="journey-num">03</div>
+          <div class="journey-content">
+            <h3>Python & Data</h3>
+            <p>Developing Python skills and exploring data analysis and automation.</p>
+          </div>
+        </div>
+        <div class="journey-item reveal">
+          <div class="journey-num">04</div>
+          <div class="journey-content">
+            <h3>Artificial Intelligence</h3>
+            <p>Learning AI and Machine Learning concepts through practical projects.</p>
+          </div>
+        </div>
+        <div class="journey-item reveal">
+          <div class="journey-num">05</div>
+          <div class="journey-content">
+            <h3>Future Goal</h3>
+            <p>Become a professional AI Engineer capable of building intelligent real-world applications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ SKILLS ══════════ -->
+    <section id="skills" class="section section--skills">
+      <div class="section-head reveal">
+        <span class="section-tag">03 — Skills</span>
+        <h2 class="section-title">Technology <span class="gold-text">Stack</span></h2>
+        <p class="section-sub">Tools I'm Learning & Building With</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Programming -->
+        <div class="skill-card glass-card reveal" style="--delay:0s">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13 5l-2 14"/></svg>
+          </div>
+          <h3>Programming</h3>
+          <p>C, Python, Data Structures</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Learning</span>
+            <span class="skill-tag">Practicing</span>
+          </div>
+          <span class="skill-progress" data-level="55"><span></span></span>
+        </div>
+
+        <!-- Data Science -->
+        <div class="skill-card glass-card reveal" style="--delay:.05s">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6" rx="1"/><rect x="12" y="8" width="3" height="10" rx="1"/><rect x="17" y="5" width="3" height="13" rx="1"/></svg>
+          </div>
+          <h3>Data Science</h3>
+          <p>Python, NumPy, Pandas, Data Analysis, Visualization</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Exploring</span>
+            <span class="skill-tag">Learning</span>
+          </div>
+          <span class="skill-progress" data-level="50"><span></span></span>
+        </div>
+
+        <!-- AI & Data -->
+        <div class="skill-card glass-card reveal" style="--delay:.1s">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6a6 6 0 1 0 6 6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3>AI & Data</h3>
+          <p>Python, NumPy, Pandas, Machine Learning, AI Fundamentals</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Exploring</span>
+            <span class="skill-tag">Learning</span>
+          </div>
+          <span class="skill-progress" data-level="45"><span></span></span>
+        </div>
+
+        <!-- Python Backend / APIs -->
+        <div class="skill-card glass-card reveal" style="--delay:.15s">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H8l-4 4V5Z"/><path d="m8 9 3 3 4-4"/></svg>
+          </div>
+          <h3>Python Backend & APIs</h3>
+          <p>Python APIs, Streamlit, REST Basics</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Learning</span>
+            <span class="skill-tag">Practicing</span>
+          </div>
+          <span class="skill-progress" data-level="40"><span></span></span>
+        </div>
+
+        <!-- Database -->
+        <div class="skill-card glass-card reveal" style="--delay:.2s">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg>
+          </div>
+          <h3>Database</h3>
+          <p>MongoDB, SQL</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Exploring</span>
+          </div>
+          <span class="skill-progress" data-level="35"><span></span></span>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card glass-card reveal" style="--delay:.25s">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m14.7 6.3 3 3L8 19H5v-3l9.7-9.7Z"/><path d="m13.5 7.5 3 3"/><path d="M9 2v2M4 7H2M6 4l-1.5-1.5M18 2v2M22 7h-2M20 4l-1.5-1.5"/></svg>
+          </div>
+          <h3>Tools</h3>
+          <p>Git, GitHub, VS Code, Google Colab</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Building With</span>
+          </div>
+          <span class="skill-progress" data-level="60"><span></span></span>
+        </div>
+      </div>
+
+      <div class="proficiency-note reveal">
+        <span class="note-dot"></span>
+        <p>I'm intentionally transparent about where I am in my journey — every skill above is actively being learned, practiced, and strengthened through projects.</p>
+      </div>
+    </section>
+
+    <!-- ══════════ PROJECTS ══════════ -->
+    <section id="projects" class="section section--projects">
+      <div class="section-head reveal">
+        <span class="section-tag">04 — Projects</span>
+        <h2 class="section-title">Selected <span class="gold-text">Work</span></h2>
+        <p class="section-sub">Projects, experiments & learning — proof of curiosity in action.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Featured project -->
+        <article class="project-card project-card--featured glass-card reveal">
+          <div class="project-number">01</div>
+          <div class="project-thumb" style="--thumb-a:#D4AF37; --thumb-b:#3a2e0a; --thumb-c:#050505;">
+            <div class="thumb-pattern"></div>
+            <div class="thumb-shine"></div>
+            <div class="thumb-initials">AI</div>
+            <span class="thumb-cat">AI · Data</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-cat">AI DATA ANALYSIS</span>
+              <span class="project-year">In Progress</span>
+            </div>
+            <h3>Interactive Data Analysis</h3>
+            <p>An interactive data analysis project built using Python and Pandas to explore real-world datasets and generate meaningful insights.</p>
+            <div class="project-tech">
+              <span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Jupyter</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" rel="noopener" aria-label="GitHub repository (placeholder)">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.05.78 2.13v3.16c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="project-link" rel="noopener" aria-label="Live demo (placeholder)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card glass-card reveal">
+          <div class="project-number">02</div>
+          <div class="project-thumb" style="--thumb-a:#F4D58D; --thumb-b:#4d3d12; --thumb-c:#050505;">
+            <div class="thumb-pattern"></div>
+            <div class="thumb-shine"></div>
+            <div class="thumb-initials">ML</div>
+            <span class="thumb-cat">Machine Learning</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-cat">MACHINE LEARNING</span>
+              <span class="project-year">In Progress</span>
+            </div>
+            <h3>Predictive Model Playground</h3>
+            <p>Exploring ML fundamentals through small, hands-on experiments with classification and regression datasets.</p>
+            <div class="project-tech">
+              <span>Python</span><span>SciKit-learn</span><span>Pandas</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" rel="noopener" aria-label="GitHub repository (placeholder)">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.05.78 2.13v3.16c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card glass-card reveal">
+          <div class="project-number">03</div>
+          <div class="project-thumb" style="--thumb-a:#E6C068; --thumb-b:#3b2e0e; --thumb-c:#090806;">
+            <div class="thumb-pattern"></div>
+            <div class="thumb-shine"></div>
+            <div class="thumb-initials">NLP</div>
+            <span class="thumb-cat">NLP · AI</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-cat">NATURAL LANGUAGE PROCESSING</span>
+              <span class="project-year">In Progress</span>
+            </div>
+            <h3>NLP Text Analyzer</h3>
+            <p>Exploring natural language processing with Python — building tools that analyze, summarize, and understand text data.</p>
+            <div class="project-tech">
+              <span>Python</span><span>NLP</span><span>NLTK</span><span>Pandas</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" rel="noopener" aria-label="GitHub repository (placeholder)">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.05.78 2.13v3.16c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card glass-card reveal">
+          <div class="project-number">04</div>
+          <div class="project-thumb" style="--thumb-a:#b98e2f; --thumb-b:#2c2408; --thumb-c:#050505;">
+            <div class="thumb-pattern"></div>
+            <div class="thumb-shine"></div>
+            <div class="thumb-initials">AI</div>
+            <span class="thumb-cat">AI Engineer</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-cat">FULL STACK</span>
+              <span class="project-year">In Progress</span>
+            </div>
+            <h3>AI Learning App</h3>
+            <p>Building an AI-powered learning application that combines intelligent features with modern web technology.</p>
+            <div class="project-tech">
+              <span>Python</span><span>AI</span><span>ML</span><span>Streamlit</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" rel="noopener" aria-label="GitHub repository (placeholder)">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.05.78 2.13v3.16c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card glass-card reveal">
+          <div class="project-number">05</div>
+          <div class="project-thumb" style="--thumb-a:#D4AF37; --thumb-b:#2a2309; --thumb-c:#050505;">
+            <div class="thumb-pattern"></div>
+            <div class="thumb-shine"></div>
+            <div class="thumb-initials">PB</div>
+            <span class="thumb-cat">Python</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-cat">AUTOMATION</span>
+              <span class="project-year">Experiment</span>
+            </div>
+            <h3>Python Automation Scripts</h3>
+            <p>Exploring Python-based automation — small scripts that simplify repetitive tasks and teach practical problem solving.</p>
+            <div class="project-tech">
+              <span>Python</span><span>Automation</span><span>Scripts</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" rel="noopener" aria-label="GitHub repository (placeholder)">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.05.78 2.13v3.16c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="projects-note reveal">
+        <span class="note-dot"></span>
+        Project links and details are placeholders — ready to be replaced with real repositories and live demos.
+      </p>
+    </section>
+
+    <!-- ══════════ SERVICES (WHAT I'M BUILDING TOWARD) ══════════ -->
+    <section id="services" class="section section--services">
+      <div class="section-head reveal">
+        <span class="section-tag">05 — AI Capabilities</span>
+        <h2 class="section-title">AI-Focused <span class="gold-text">Capabilities</span></h2>
+        <p class="section-sub">Capabilities I'm actively learning and developing on the path to becoming an AI Engineer.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card glass-card reveal">
+          <div class="service-num">01</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44A2.5 2.5 0 0 1 4 17.5c0-.36.08-.7.22-1A2.5 2.5 0 0 1 3.5 12c.72 0 1.36.25 1.87.66A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44A2.5 2.5 0 0 0 20 17.5c0-.36-.08-.7-.22-1A2.5 2.5 0 0 0 20.5 12a2.5 2.5 0 0 0-2.37-3.34A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+          </div>
+          <h3>AI & Machine Learning</h3>
+          <p>Building intelligent applications using Python, Machine Learning, and modern AI technologies.</p>
+        </div>
+
+        <div class="service-card glass-card reveal">
+          <div class="service-num">02</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13 5-2 14"/></svg>
+          </div>
+          <h3>Python & AI Development</h3>
+          <p>Developing AI solutions, automation workflows, and intelligent backend systems with Python.</p>
+        </div>
+
+        <div class="service-card glass-card reveal">
+          <div class="service-num">03</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6" rx="1"/><rect x="12" y="8" width="3" height="10" rx="1"/><rect x="17" y="5" width="3" height="13" rx="1"/></svg>
+          </div>
+          <h3>Data Science & Analytics</h3>
+          <p>Working with Pandas, NumPy, data analysis, visualization, and extracting meaningful insights from data.</p>
+        </div>
+
+        <div class="service-card glass-card reveal">
+          <div class="service-num">04</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0Z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+          </div>
+          <h3>Generative AI</h3>
+          <p>Exploring LLMs, AI-powered applications, prompt engineering, and modern Generative AI technologies.</p>
+        </div>
+
+        <div class="service-card glass-card reveal">
+          <div class="service-num">05</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg>
+          </div>
+          <h3>AI APIs & Automation</h3>
+          <p>Integrating AI APIs and building smart automation solutions that improve productivity and user experience.</p>
+        </div>
+
+        <div class="service-card glass-card reveal">
+          <div class="service-num">06</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+          </div>
+          <h3>AI-Powered Applications</h3>
+          <p>Creating practical AI applications by combining machine learning, APIs, modern web technologies, and intelligent automation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ LEARNING JOURNEY ══════════ -->
+    <section id="experience" class="section section--experience">
+      <div class="section-head reveal">
+        <span class="section-tag">06 — Timeline</span>
+        <h2 class="section-title">Learning <span class="gold-text">Journey</span></h2>
+        <p class="section-sub">An honest timeline of where I am and where I'm headed.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2025 — Present</div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-role">BCA Student</span>
+            <h3>Bachelor of Computer Applications <span class="timeline-company">· Dr. A.P.J. Abdul Kalam Technical University (AKTU)</span></h3>
+            <p>Learning programming, data science, databases, and software engineering fundamentals.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">Current</div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-role">AI & Machine Learning Exploration</span>
+            <h3>Self-Directed Learning <span class="timeline-company">· Building Understanding</span></h3>
+            <p>Learning Python, data handling, machine learning concepts, and AI application development.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">Ongoing</div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-role">Project-Based Learning</span>
+            <h3>Learning by Doing <span class="timeline-company">· Hands-On Projects</span></h3>
+            <p>Building projects to strengthen practical development and problem-solving skills.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ WHY AI (FULLSCREEN) ══════════ -->
+    <section id="whyai" class="section section--whyai">
+      <div class="whyai-inner">
+        <div class="whyai-content">
+          <div class="section-head reveal">
+            <span class="section-tag">07 — Vision</span>
+            <h2 class="section-title">Why <span class="gold-text">AI?</span></h2>
+          </div>
+          <p class="whyai-text reveal">
+            AI is changing how software is built, how people interact with technology, and how complex
+            problems are solved. I want to understand this technology deeply and learn how to turn AI
+            concepts into useful products.
+          </p>
+
+          <div class="whyai-points reveal">
+            <div class="whyai-point">
+              <span class="point-dot"></span>
+              <p>Learning how intelligent systems actually work</p>
+            </div>
+            <div class="whyai-point">
+              <span class="point-dot"></span>
+              <p>Building practical products powered by AI</p>
+            </div>
+            <div class="whyai-point">
+              <span class="point-dot"></span>
+              <p>Growing from curious student into a professional AI Engineer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ PHILOSOPHY ══════════ -->
+    <section id="philosophy" class="section section--philosophy">
+      <div class="philosophy-inner reveal">
+        <span class="section-tag">08 — Philosophy</span>
+        <h2 class="philosophy-title">LEARN. BUILD. <span class="gold-text">BREAK.</span> UNDERSTAND. IMPROVE.</h2>
+        <p class="philosophy-text">
+          I believe the fastest way to grow as an AI Engineer is to keep building, experimenting,
+          making mistakes, and understanding how intelligent systems actually work.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <section id="contact" class="section section--contact">
+      <div class="section-head reveal">
+        <span class="section-tag">09 — Contact</span>
+        <h2 class="section-title">Let's Build Something <span class="gold-text">Intelligent</span></h2>
+        <p class="section-sub">I'm currently looking for opportunities to learn, collaborate, build meaningful projects, and grow in the AI space.</p>
+      </div>
+
+      <div class="contact-card glass-card reveal">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>
+            Whether it's an internship opportunity, a collaboration, or just a conversation about AI —
+            my inbox is always open.
+          </p>
+
+          <button class="social-hub" id="socialHub" aria-label="Open social links" aria-expanded="false">
+            <span class="social-hub-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
+            </span>
+            <span class="social-hub-text">Connect With Me</span>
+            <span class="social-hub-arrow">→</span>
+          </button>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" />
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+            <span class="form-error" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity or idea..." required></textarea>
+            <span class="form-error" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-block" id="sendBtn">
+            <span class="btn-label">Send Message</span>
+            <span class="btn-arrow">→</span>
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="#home" class="footer-logo">KY<span>.</span></a>
+      <p class="footer-role">Aspiring AI Engineer</p>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Khushi Yadav. Built with curiosity, code & AI.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/khushiyadav222" target="_blank" rel="noopener" class="footer-social" aria-label="GitHub - Khushi Yadav">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.05.78 2.13v3.16c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/khushi-yadav-43ab45411/" target="_blank" rel="noopener" class="footer-social" aria-label="LinkedIn - Khushi Yadav">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/iam_yadav3646/?hl=en" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram - Khushi Yadav">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="mailto:khushiyadav250307@gmail.com" class="footer-social" aria-label="Email Khushi Yadav">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════ SOCIAL LINKS POPUP ══════════ -->
+  <div class="social-popup" id="socialPopup" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="social-popup-overlay" id="socialPopupOverlay"></div>
+    <div class="social-popup-card">
+      <button class="social-popup-close" id="socialPopupClose" aria-label="Close social links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <h3>Connect With Me</h3>
+      <p>Choose a platform to reach out</p>
+      <div class="social-popup-links">
+        <a href="mailto:khushiyadav250307@gmail.com" class="social-popup-link" aria-label="Email Khushi Yadav">
+          <span class="social-popup-link-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
+          </span>
+          <span class="social-popup-link-label">Email</span>
+        </a>
+        <a href="https://github.com/khushiyadav222" target="_blank" rel="noopener" class="social-popup-link" aria-label="GitHub - Khushi Yadav">
+          <span class="social-popup-link-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.05.78 2.13v3.16c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+          </span>
+          <span class="social-popup-link-label">GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/khushi-yadav-43ab45411/" target="_blank" rel="noopener" class="social-popup-link" aria-label="LinkedIn - Khushi Yadav">
+          <span class="social-popup-link-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+          </span>
+          <span class="social-popup-link-label">LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/iam_yadav3646/?hl=en" target="_blank" rel="noopener" class="social-popup-link" aria-label="Instagram - Khushi Yadav">
+          <span class="social-popup-link-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <span class="social-popup-link-label">Instagram</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
